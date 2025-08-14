@@ -1,0 +1,170 @@
+<!<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lawan Kole — Community Health Profile</title>
+  <meta name="description" content="Personal site for Lawan Kole (RCHP, CHEW) — profile, bio, achievements and portfolio.">
+  <style>
+/* === Base Styles (embedded per page) === */
+:root{
+  --bg:#0f172a;
+  --panel:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --brand:#38bdf8;
+  --accent:#34d399;
+  --ring:#22d3ee30;
+  --shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 20% 0%, #0b1220 0%, #0f172a 50%, #0b1020 100%);color:var(--text);font:16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, 'Helvetica Neue', Arial;scroll-behavior:smooth}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.header{position:sticky;top:0;background:rgba(15,23,42,.6);backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid #1f2937;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.3px}
+.nav a{padding:10px 14px;border-radius:12px}
+.nav a.active,.nav a:hover{background:#0b1220}
+.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#1e293b,#0b1220);border:1px solid #1f2937;border-radius:14px;padding:10px 14px;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.grid{display:grid;gap:22px}
+.card{background:linear-gradient(180deg,#0b1220,#0d1423);border:1px solid #1f2937;border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+.kicker{letter-spacing:.25em;color:var(--muted);text-transform:uppercase;font-size:12px}
+.h1{font-size:38px;line-height:1.15;margin:.2em 0 .5em}
+.h2{font-size:24px;margin:.2em 0 .6em}
+.meta{color:var(--muted);font-size:14px}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid #1f2937;background:#0b1220;color:#c7d2fe;margin-right:8px;font-size:12px}
+.footer{border-top:1px solid #1f2937;color:var(--muted);padding:30px 0;margin-top:50px}
+.row{display:flex;gap:22px;flex-wrap:wrap}
+.col{flex:1 1 280px}
+/* Avatar wrapper with breathing halo */
+.avatar-wrap{position:relative;display:inline-block}
+.halo{position:absolute;inset:-18px;border-radius:9999px;background:radial-gradient(circle at 50% 50%, #22d3ee40, #22d3ee16 30%, transparent 60%);animation:breath 4s ease-in-out infinite}
+@keyframes breath{
+  0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(34,211,238,.0))}
+  50%{transform:scale(1.06);filter:drop-shadow(0 0 14px rgba(34,211,238,.55))}
+}
+.avatar{width:120px;height:120px;border-radius:9999px;display:block;border:1px solid #1f2937;background:radial-gradient(circle at 30% 25%, #1f2937, #0b1220 60%);}
+.timeline{position:relative;margin:0;padding:0;list-style:none}
+.timeline::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:#1f2937}
+.timeline li{position:relative;padding-left:34px;margin:16px 0}
+.timeline li::before{content:"";position:absolute;left:4px;top:.6em;width:12px;height:12px;border-radius:50%;border:2px solid #34d399;background:#0b1220}
+.stack-sm>*{margin:8px 0}
+.stack>*{margin:12px 0}
+.stack-lg>*{margin:18px 0}
+.muted{color:var(--muted)}
+hr{border:none;border-top:1px solid #1f2937;margin:22px 0}
+@media (min-width: 780px){
+  .grid.cols-2{grid-template-columns:1.2fr .8fr}
+  .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+}
+.hero{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.pill{font-size:13px;padding:8px 12px;border-radius:999px;background:#0b1220;border:1px solid #1f2937}
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <div class="brand">
+      <div class="avatar-wrap">
+        <div class="halo"></div>
+        <!-- Embedded SVG Avatar -->
+        <svg class="avatar" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#60a5fa"/>
+              <stop offset="100%" stop-color="#34d399"/>
+            </linearGradient>
+          </defs>
+          <circle cx="60" cy="60" r="58" fill="url(#g1)" opacity="0.12"/>
+          <circle cx="60" cy="48" r="18" fill="#e5e7eb"/>
+          <rect x="32" y="68" width="56" height="32" rx="16" fill="#e5e7eb"/>
+          <circle cx="60" cy="43" r="8" fill="#111827"/>
+          <rect x="44" y="84" width="32" height="8" rx="4" fill="#111827" opacity=".5"/>
+        </svg>
+      </div>
+      <h1>Lawan Kole</h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Profile</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="portfolio.html">Portfolio</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container stack-lg">
+  <section class="card hero" id="about">
+    <div style="min-width:280px;flex:1 1 340px">
+      <div class="kicker">Community Health • RCHP</div>
+      <h2 class="h1">Community-focused, data-aware healthcare.</h2>
+      <p class="meta">Current School: Alma'arif College of Nursing, Midwifery & Health Sciences • Course: Community Health Extension Worker (CHEW) • Expected Graduation: <strong>30 Aug 2025</strong></p>
+      <div class="stack">
+        <p>I’m a Registered Community Health Practitioner (RCHP) in training with a passion for primary healthcare delivery, maternal & child health, and preventive medicine. I thrive in field outreach, structured health education, and culturally-sensitive care.</p>
+        <p>My goal is to strengthen community health systems through evidence-based programs, task-shifting, and digital record-keeping — reducing preventable morbidity across underserved communities.</p>
+      </div>
+      <div class="cta">
+        <a class="btn" href="mailto:lawan.kole@example.com">✉️ Email Me</a>
+        <a class="btn" href="https://wa.me/2349031254600" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <span class="pill">RCHP</span>
+        <span class="pill">CHEW</span>
+      </div>
+    </div>
+    <div class="card" style="flex:1 1 260px">
+      <h3 class="h2">At a glance</h3>
+      <ul class="stack-sm">
+        <li><strong>Professional Title:</strong> Registered Community Health Practitioner (RCHP)</li>
+        <li><strong>Focus Areas:</strong> Maternal & Child Health, Immunization, Health Education, Disease Surveillance</li>
+        <li><strong>Interests:</strong> MNCH, NCD prevention, mHealth, community data systems</li>
+      </ul>
+      <hr>
+      <div class="stack-sm">
+        <div class="badge">BLS Certified</div>
+        <div class="badge">First Aid & CPR</div>
+        <div class="badge">Cold Chain Mgmt</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid cols-3">
+    <div class="card">
+      <div class="kicker">Contact</div>
+      <h3 class="h2">Let’s collaborate</h3>
+      <p class="muted">Available for internships, clinical rotations, and community outreach projects.</p>
+      <div class="stack-sm">
+        <p>📧 <a href="mailto:lawan.kole@example.com">lawan.kole@example.com</a></p>
+        <p>📱 <a href="https://wa.me/2349031254600" target="_blank" rel="noopener">+234 903 125 4600</a></p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="kicker">Education</div>
+      <h3 class="h2">Alma'arif College</h3>
+      <p>Community Health Extension Worker (CHEW)</p>
+      <p class="meta">Expected Graduation: 30 Aug 2025</p>
+    </div>
+    <div class="card">
+      <div class="kicker">Highlights</div>
+      <ul class="timeline">
+        <li>Led immunization outreach covering 7 underserved wards; improved coverage by 18% in 3 months.</li>
+        <li>Designer a simple ANC reminder system that increased attendance consistency by 25%.</li>
+        <li>Facilitated 20+ health talks on nutrition, sanitation, and malaria prevention.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">© <span id="year"></span> Lawan Kole · Built with care for healthier communities.</div>
+</footer>
+
+<script>
+const links = document.querySelectorAll('.nav a');
+links.forEach(a => { if(a.href === location.href){ a.classList.add('active'); }});
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
