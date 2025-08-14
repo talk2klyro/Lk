@@ -1,0 +1,108 @@
+<!<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lawan Kole — Portfolio</title>
+<style>
+/* Same base styling */
+:root{
+  --bg:#0f172a;--panel:#111827;--text:#e5e7eb;--muted:#9ca3af;
+  --brand:#38bdf8;--accent:#34d399;--ring:#22d3ee30;
+  --shadow:0 10px 30px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 20% 0%, #0b1220 0%, #0f172a 50%, #0b1020 100%);color:var(--text);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,'Helvetica Neue',Arial}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.header{position:sticky;top:0;background:rgba(15,23,42,.6);backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid #1f2937;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand h1{font-size:18px;margin:0;font-weight:700}
+.nav a{padding:10px 14px;border-radius:12px}
+.nav a.active,.nav a:hover{background:#0b1220}
+.card{background:linear-gradient(180deg,#0b1220,#0d1423);border:1px solid #1f2937;border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+.h2{font-size:24px;margin:.2em 0 .6em}
+.grid{display:grid;gap:22px}
+@media(min-width:700px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+.avatar-wrap{position:relative;display:inline-block}
+.halo{position:absolute;inset:-18px;border-radius:9999px;background:radial-gradient(circle at 50% 50%, #22d3ee40, #22d3ee16 30%, transparent 60%);animation:breath 4s ease-in-out infinite}
+@keyframes breath{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.avatar{width:120px;height:120px;border-radius:9999px;display:block;border:1px solid #1f2937;background:radial-gradient(circle at 30% 25%, #1f2937, #0b1220 60%)}
+.footer{border-top:1px solid #1f2937;color:var(--muted);padding:30px 0;margin-top:50px}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <div class="brand">
+      <div class="avatar-wrap">
+        <div class="halo"></div>
+        <svg class="avatar" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#34d399"/>
+          </linearGradient></defs>
+          <circle cx="60" cy="60" r="58" fill="url(#g1)" opacity="0.12"/>
+          <circle cx="60" cy="48" r="18" fill="#e5e7eb"/>
+          <rect x="32" y="68" width="56" height="32" rx="16" fill="#e5e7eb"/>
+          <circle cx="60" cy="43" r="8" fill="#111827"/>
+          <rect x="44" y="84" width="32" height="8" rx="4" fill="#111827" opacity=".5"/>
+        </svg>
+      </div>
+      <h1>Lawan Kole</h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Profile</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="portfolio.html">Portfolio</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2 class="h2">Research Projects</h2>
+    <ul>
+      <li><strong>Community Health Education Impact Study</strong> — Evaluated effectiveness of maternal health talks in rural clinics. Showed 22% increase in ANC visits. (May–Aug 2024)</li>
+      <li><strong>Water Sanitation & Hygiene (WASH) Intervention</strong> — Conducted baseline survey and implemented handwashing stations in 5 schools. (Jan–Apr 2024)</li>
+    </ul>
+  </section>
+
+  <section class="grid cols-2" style="margin-top:20px">
+    <div class="card">
+      <h2 class="h2">Volunteer Work</h2>
+      <ul>
+        <li>Field Volunteer — Red Cross Nigeria (2024)</li>
+        <li>Maternal Health Outreach — SafeHands Initiative (2024)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2 class="h2">Certifications</h2>
+      <ul>
+        <li>Basic Life Support (BLS)</li>
+        <li>First Aid & CPR</li>
+        <li>HIPAA Awareness Training</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:20px">
+    <h2 class="h2">Practical Experience</h2>
+    <ul>
+      <li>Clinical Rotations — Primary Health Center, Kano (Jan–Jun 2024)</li>
+      <li>Immunization Campaign Support — Gaya LGA (Jul–Aug 2024)</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">© <span id="year"></span> Lawan Kole · Portfolio</div>
+</footer>
+<script>
+const links=document.querySelectorAll('.nav a');
+links.forEach(a=>{if(a.href===location.href){a.classList.add('active')}})
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
